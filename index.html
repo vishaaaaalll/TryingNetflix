@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TryingNetflix — Watch Original Stories</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="nav" id="nav">
+  <a class="logo" href="#">Trying<span>Netflix</span></a>
+  <nav class="nav-links">
+    <a href="#" class="active" data-filter-row="all">Home</a>
+    <a href="#" data-filter-row="series">Series</a>
+    <a href="#" data-filter-row="films">Films</a>
+    <a href="#" data-filter-row="trending">New &amp; Popular</a>
+    <a href="#" data-filter-row="mylist">My List</a>
+  </nav>
+  <div class="nav-right">
+    <input id="search" type="search" placeholder="Search titles..." aria-label="Search titles">
+    <div class="avatar" title="Profile">V</div>
+  </div>
+</header>
+
+<main>
+  <section class="hero" id="hero">
+    <div class="hero-inner">
+      <p class="hero-kicker">TryingNetflix Original</p>
+      <h1 id="hero-title">Monsoon Heist</h1>
+      <p class="hero-meta"><span class="match">98% Match</span> 2026 &middot; Thriller &middot; 1 Season</p>
+      <p class="hero-desc" id="hero-desc">When the rains flood the city, a crew of unlikely thieves plans the one job the water will wash away. Loyalty, luck and one very leaky getaway boat.</p>
+      <div class="hero-actions">
+        <button class="btn btn-play" id="hero-play">&#9654; Play</button>
+        <button class="btn btn-info" id="hero-info">More Info</button>
+      </div>
+    </div>
+  </section>
+
+  <p class="noresults" id="noresults" hidden>No titles match your search. Try another word.</p>
+
+  <section class="row" id="row-mylist" hidden>
+    <h2>My List</h2>
+    <div class="track" id="track-mylist"></div>
+  </section>
+
+  <section class="row" id="row-trending" data-row="trending">
+    <h2>Trending Now</h2>
+    <div class="row-wrap">
+      <button class="arrow left" aria-label="Scroll left">&#8249;</button>
+      <div class="track" id="track-trending"></div>
+      <button class="arrow right" aria-label="Scroll right">&#8250;</button>
+    </div>
+  </section>
+
+  <section class="row" id="row-series" data-row="series">
+    <h2>Original Series</h2>
+    <div class="row-wrap">
+      <button class="arrow left" aria-label="Scroll left">&#8249;</button>
+      <div class="track" id="track-series"></div>
+      <button class="arrow right" aria-label="Scroll right">&#8250;</button>
+    </div>
+  </section>
+
+  <section class="row" id="row-films" data-row="films">
+    <h2>Films</h2>
+    <div class="row-wrap">
+      <button class="arrow left" aria-label="Scroll left">&#8249;</button>
+      <div class="track" id="track-films"></div>
+      <button class="arrow right" aria-label="Scroll right">&#8250;</button>
+    </div>
+  </section>
+
+  <section class="row" id="row-comedy" data-row="comedy">
+    <h2>Comedy</h2>
+    <div class="row-wrap">
+      <button class="arrow left" aria-label="Scroll left">&#8249;</button>
+      <div class="track" id="track-comedy"></div>
+      <button class="arrow right" aria-label="Scroll right">&#8250;</button>
+    </div>
+  </section>
+
+  <section class="row" id="row-docs" data-row="docs">
+    <h2>Documentaries</h2>
+    <div class="row-wrap">
+      <button class="arrow left" aria-label="Scroll left">&#8249;</button>
+      <div class="track" id="track-docs"></div>
+      <button class="arrow right" aria-label="Scroll right">&#8250;</button>
+    </div>
+  <section class="benefits">
+    <h2>More reasons to join</h2>
+    <div class="benefit-grid">
+      <div class="benefit"><h3>Watch on your TV</h3><p>Stream on smart TVs, consoles and sticks from your sofa.</p><span class="benefit-icon">&#9783;</span></div>
+      <div class="benefit"><h3>Download and go</h3><p>Save titles on your phone or tablet and watch offline.</p><span class="benefit-icon">&#8595;</span></div>
+      <div class="benefit"><h3>Watch everywhere</h3><p>Start on one device, pick up on another, anywhere.</p><span class="benefit-icon">&#9784;</span></div>
+      <div class="benefit"><h3>Profiles for kids</h3><p>A space made for younger viewers, with titles picked for them.</p><span class="benefit-icon">&#9786;</span></div>
+    </div>
+  </section>
+
+  <section class="faq">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-item"><button class="faq-q">What is TryingNetflix?<span>+</span></button><div class="faq-a" hidden><p>A demo streaming site built from scratch as a learning project, with invented titles and no real video.</p></div></div>
+    <div class="faq-item"><button class="faq-q">How much does it cost?<span>+</span></button><div class="faq-a" hidden><p>Nothing. This demo has no pricing, no checkout and no real membership.</p></div></div>
+    <div class="faq-item"><button class="faq-q">Where can I watch?<span>+</span></button><div class="faq-a" hidden><p>Anywhere with a browser. The demo is a single static page with no app to install.</p></div></div>
+    <div class="faq-item"><button class="faq-q">How do I cancel?<span>+</span></button><div class="faq-a" hidden><p>There is nothing to cancel. Closing the page ends the demo.</p></div></div>
+    <div class="faq-item"><button class="faq-q">What can I watch here?<span>+</span></button><div class="faq-a" hidden><p>Twenty-three invented placeholder titles across five rows, with short original descriptions.</p></div></div>
+    <div class="faq-item"><button class="faq-q">Is it suitable for kids?<span>+</span></button><div class="faq-a" hidden><p>The placeholder titles are family-friendly inventions, and the demo includes a kids-profiles note in the benefits section.</p></div></div>
+  </section>
+
+  <section class="signup">
+    <p>Ready to watch? Enter your email to create or restart a demo membership.</p>
+    <form id="signup-form"><input type="email" required placeholder="Email address" aria-label="Email address"><button class="btn btn-play" type="submit">Get Started &gt;</button></form>
+    <p class="signup-note" id="signup-note" hidden>Thanks! This is a demo, so no account was created and nothing was sent.</p>
+  </section>
+</main>
+
+<footer>
+  <p>Questions? This is a learning project built from scratch.</p>
+  <div class="foot-grid">
+    <a href="#">Help Centre</a><a href="#">About</a><a href="#">Careers</a><a href="#">Terms</a>
+    <a href="#">Privacy</a><a href="#">Cookie Preferences</a><a href="#">Contact</a><a href="#">FAQ</a>
+  </div>
+  <p class="disclaimer">TryingNetflix is an original demo. Not affiliated with, endorsed by, or connected to Netflix, Inc. All titles, artwork and descriptions are invented placeholders.</p>
+</footer>
+
+<div class="modal-backdrop" id="modal" hidden>
+  <div class="modal" role="dialog" aria-modal="true">
+    <button class="modal-close" id="modal-close" aria-label="Close">&times;</button>
+    <div class="modal-poster" id="modal-poster"></div>
+    <div class="modal-body">
+      <h2 id="modal-title"></h2>
+      <p class="modal-meta" id="modal-meta"></p>
+      <p id="modal-desc"></p>
+      <div class="modal-actions">
+        <button class="btn btn-play" id="modal-play">&#9654; Play</button>
+        <button class="btn btn-info" id="modal-list">+ My List</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal-backdrop" id="player" hidden>
+  <div class="modal player-modal" role="dialog" aria-modal="true">
+    <button class="modal-close" id="player-close" aria-label="Close">&times;</button>
+    <div class="player-screen">
+      <p class="player-title" id="player-title"></p>
+      <p>Preview player placeholder — no video file is bundled with this demo.</p>
+      <p class="player-note">In a real build, the video stream would load here.</p>
+    </div>
+  </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
